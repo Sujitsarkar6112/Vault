@@ -53,6 +53,8 @@ const Header = () => {
               }
             }}
             showName={true}
+            userProfileMode="navigation"
+            userProfileUrl="/profile"
             userProfileProps={{
               appearance: {
                 elements: {

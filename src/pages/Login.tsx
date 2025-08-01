@@ -36,14 +36,18 @@ const Login = () => {
               card: "bg-gray-800/50 border-gray-700",
               headerTitle: "text-white",
               headerSubtitle: "text-gray-400",
-              socialButtonsBlockButton: "border-gray-600 text-gray-300 hover:bg-gray-700",
+              socialButtonsBlockButton: "border-gray-600 text-gray-300 hover:bg-gray-700/50 transition-colors",
+              socialButtonsBlockButtonText: "text-gray-300 font-medium",
+              dividerLine: "bg-gray-600",
+              dividerText: "text-gray-400",
               formFieldInput: "bg-gray-700 border-gray-600 text-white",
               formFieldLabel: "text-gray-300",
               identityPreviewText: "text-gray-300",
               identityPreviewEditButton: "text-blue-400 hover:text-blue-300"
             },
             layout: {
-              socialButtonsPlacement: "bottom"
+              socialButtonsPlacement: "top",
+              socialButtonsVariant: "blockButton"
             }
           }}
           redirectUrl="/dashboard"

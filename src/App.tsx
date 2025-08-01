@@ -15,6 +15,7 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Index from './pages/Index';
+import UserProfile from './pages/UserProfile';
 import NotFound from './pages/NotFound';
 
 const query_client = new QueryClient();
@@ -44,8 +45,8 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 const AppContent = () => {
   const location = useLocation();
   
-  // Dashboard route should not show marketing nav or footer
-  const is_dashboard_route = location.pathname === '/dashboard';
+  // Dashboard and profile routes should not show marketing nav or footer
+  const is_dashboard_route = location.pathname === '/dashboard' || location.pathname === '/profile';
   
   return (
     <>
@@ -61,6 +62,11 @@ const AppContent = () => {
         <Route path='/dashboard' element={
           <ProtectedRoute>
             <Index />
+          </ProtectedRoute>
+        } />
+        <Route path='/profile' element={
+          <ProtectedRoute>
+            <UserProfile />
           </ProtectedRoute>
         } />
         <Route path='*' element={<NotFound />} />
